@@ -1,0 +1,133 @@
+
+<!-- saved from url=(0050)http://148.202.119.6:8080/experiment/jsp/start.jsp -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">
+        function echeck(str) {
+        var at = "@"
+        var dot = "."
+        var lat = str.indexOf(at)
+        var lstr = str.length
+        var ldot = str.indexOf(dot)
+        if (str.indexOf(at)==-1){
+            alert("Invalid email address")
+            return false
+        }
+        if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
+            alert("Invalid email address")
+            return false
+        }
+        if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
+            alert("Invalid email address")
+            return false
+        }
+        if (str.indexOf(at,(lat+1))!=-1){
+            alert("Invalid email address")
+            return false
+        }
+        if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+            alert("Invalid email address")
+            return false
+        }
+        if (str.indexOf(dot,(lat+2))==-1){
+            alert("Invalid email address")
+            return false
+        }
+        if (str.indexOf(" ")!=-1){
+            alert("Invalid email address")
+            return false
+        }
+        return true
+        }
+
+        function ValidateEmail(){
+        var emailID=document.emailCollect.emailField
+  
+        if ((emailID.value==null)||(emailID.value=="")){
+            alert("Please enter your email address")
+            emailID.focus()
+            return false
+        }
+        if (echeck(emailID.value)==false){
+            emailID.value=""
+            emailID.focus()
+            return false
+        }
+        UEmail = emailID.value
+        document.getElementById('sessionemail').innerHTML = "current session: "+UEmail
+        
+        return true
+    }
+    
+
+    </script>
+
+    </head><body>
+        
+       <link rel="stylesheet" type="text/css" href="./test/stylesmobi.css">
+
+           <script type="text/javascript">
+               document.emailCollect.clientType = "desktop";
+           </script>
+            
+
+    <title>Initial Information</title>
+    
+    <div class="section" id="page">
+        <div class="header">
+            <img src="./test/COMoDELogo.png" width="170" height="100" alt="COMoDE Logo">
+            <h2>Context Ontology for Mobile Devices</h2>
+            <div class="nav clear" id="sessionemail">
+                <ul>
+                    <li>WELCOME</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section" id="articles"></div>
+        <div class="article" id="article1">
+            <h2>Experiment description</h2>Please read all the instructions carefully
+            <div class="line"></div>
+            <p>This experiment consists in 12 items which will be showed one by one.
+                Each item will show you an imaginary situation where you should be 
+                required to introduce a query search string, this query string must 
+                be introduced in the text box, once completed, you should press the "Continue" button:</p>
+            <!-- <p align="center"><img src="./test/box.jpg" width="313" height="88" alt="Query text box"></p> -->
+            <dl>
+                <dt>There are three type of items, they are described as follows:</dt>
+                <dd>- No Word Recommendation: You must enter all the asked query text in the box, no helper text will be shown.</dd>
+                <dd>- Simple Word Recommendation: When start typing the asked query text in the box, a list of word recommendations will be shown.</dd>
+                <dd>- Context Based Word Recommendation: When start typing the asked query in the box, a list of word recommendations will be shown,
+                    but those words are generated based in the imaginary context .</dd>
+            </dl>
+            <p></p>
+            <p>You will always be able to know what type of item are you receiving, in the top-right an indicator will be showed:</p>
+            <!-- <p align="center"><img src="./test/wrt.jpg" width="313" height="88" alt="Word recommendation item type"></p> -->
+            <p></p>
+            <p>After you completed the text in the box and push the "continue" button, 
+                an item evaluation section will appear at the bottom part of the page, 
+                three slider buttons are shown and you should move it to any side where 
+                you consider as a best answer for the related question.</p>
+            <!-- <p align="center"><img src="./test/slides.jpg" width="313" height="88" alt="Word recommendation item type"></p> -->
+            
+        </div>
+        <div class="article" id="article1">
+            <h2>Initial Information</h2>
+            <div class="line"></div>
+            <div class="articleBody clear" id="maintext">
+                <p>In order to control this experiment session we need you to introduce
+                    your email address, this information will be used solely to control
+                    this session, you will not receive any comunication from us.</p>
+                <p>If you want to receive information about the experiment results, please email to
+                    vdaniel@cusur.udg.mx.</p>
+                <form name="emailCollect" method="post" action="http://148.202.119.6:8080/experiment/servlet/XperControl" onsubmit="return ValidateEmail()">
+                    Please introduce your email address*:
+                    <input size="40" type="text" name="emailField">
+                    <input type="text" hidden="true" name="clientType" value="desktop" class="hidden">
+ 
+                <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    
+</div>
+    <iframe style="position: fixed; bottom: 0px; left: 0px; width: 72px; overflow: hidden; z-index: 9999; background-color: transparent; height: 0px; " frameborder="0" allowtransparency="true">
+    </iframe>
+    <style id="_clearly_component__css" type="text/css">#next_pages_container { width: 5px; hight: 5px; position: absolute; top: -100px; left: -100px; z-index: 2147483647 !important; } </style><div id="_clearly_component__next_pages_container"></div></body></html>

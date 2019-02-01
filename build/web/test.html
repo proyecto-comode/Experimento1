@@ -1,0 +1,59 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<script type="text/javascript" src="keyboard/jquery-1.4.2.js"></script>
+<script type="text/javascript" src="keyboard/jquery.keypad.js"></script>
+<script type="text/javascript">
+$(function () {
+ $('#inputString').keypad({
+  onKeypress: function() {
+   lookup(this.value);
+  }
+ });
+});
+</script>
+
+<script type="text/javascript">
+    function lookup(inputString) {
+        if(inputString.length == 0) {
+            // Hide the suggestion box.
+            $('#suggestions').hide();
+
+        } else {
+            $.post("rpc.php", {queryString: ""+inputString+""}, function(data){
+                if(data.length >0) {
+                    $('#suggestions').show();
+                    $('#autoSuggestionsList').html(data);
+                }
+            });
+        }
+    } // lookup
+
+    function fill(thisValue) {
+        $('#inputString').val(thisValue);
+        setTimeout("$('#suggestions').hide();", 200);
+
+    }
+</script>
+</head>
+
+<body>
+
+
+    <div>
+        <form>
+            <div>
+                Type your search:
+                <br />
+                <input type="text" size="30" value="" id="inputString" onkeyup="lookup(this.value);" onblur="fill();" />
+            </div>
+
+            <div class="suggestionsBox" id="suggestions" style="display: none;">
+                <img src="upArrow.png" style="position: relative; top: -12px; left: 30px;" alt="upArrow" />
+                <div class="suggestionList" id="autoSuggestionsList">
+                    &nbsp;
+                </div>
+            </div>
+        </form>
+    </div>

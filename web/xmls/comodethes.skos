@@ -1,0 +1,1558 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY comodethes "http://www.comode.org/comode/thesaurus/comodethes.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.comode.org/comode/thesaurus/comodethes.owl#"
+     xml:base="http://www.comode.org/comode/thesaurus/comodethes.owl"
+     xmlns:comodethes="http://www.comode.org/comode/thesaurus/comodethes.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="">
+        <rdfs:comment
+            >Structure concepts must NOT have preferred labels, because shouldn&#39;t be considered in the thesaurus.
+
+It&#39;s desirable that all the concepts be in two levels, structured as follows:
+1. Structure level, this is used for bring some organization only.
+2. Concepts which will be showed to the users as a thesaurus terms</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+    <owl:ObjectProperty rdf:about="&skos;broader"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hasTopConcept -->
+
+    <owl:ObjectProperty rdf:about="&skos;hasTopConcept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+    <owl:ObjectProperty rdf:about="&skos;inScheme"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrowMatch -->
+
+    <owl:ObjectProperty rdf:about="&skos;narrowMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrower -->
+
+    <owl:ObjectProperty rdf:about="&skos;narrower"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#topConceptOf -->
+
+    <owl:ObjectProperty rdf:about="&skos;topConceptOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:DatatypeProperty rdf:about="&skos;prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="&skos;Concept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+    <owl:Class rdf:about="&skos;ConceptScheme"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#amazon -->
+
+    <skos:Concept rdf:about="#amazon">
+        <skos:prefLabel xml:lang="en">amazon</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#american_airlines -->
+
+    <skos:Concept rdf:about="#american_airlines">
+        <skos:prefLabel xml:lang="en"
+            >american airlines</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#apple -->
+
+    <skos:Concept rdf:about="#apple">
+        <skos:prefLabel xml:lang="en">apple</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#autoparts_store -->
+
+    <skos:Concept rdf:about="#autoparts_store">
+        <skos:prefLabel xml:lang="en">autoparts store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#autumn -->
+
+    <skos:Concept rdf:about="#autumn">
+        <skos:prefLabel xml:lang="en">autumn</skos:prefLabel>
+        <skos:broader rdf:resource="#temporal"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#backpack -->
+
+    <skos:Concept rdf:about="#backpack">
+        <skos:prefLabel xml:lang="en">backpack</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#baseball -->
+
+    <skos:Concept rdf:about="#baseball">
+        <skos:prefLabel xml:lang="en">baseball</skos:prefLabel>
+        <skos:broader rdf:resource="#outdoor"/>
+        <skos:broader rdf:resource="#sports"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#basketball -->
+
+    <skos:Concept rdf:about="#basketball">
+        <skos:prefLabel xml:lang="en">basketball</skos:prefLabel>
+        <skos:broader rdf:resource="#indoor"/>
+        <skos:broader rdf:resource="#sports"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#beach -->
+
+    <skos:Concept rdf:about="#beach">
+        <skos:prefLabel xml:lang="en">beach</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#bed_and_breakfast -->
+
+    <skos:Concept rdf:about="#bed_and_breakfast">
+        <skos:prefLabel xml:lang="en"
+            >bed and breakfast</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#lodging"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#bike_store -->
+
+    <skos:Concept rdf:about="#bike_store">
+        <skos:prefLabel xml:lang="en">bike store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#billboard -->
+
+    <skos:Concept rdf:about="#billboard">
+        <skos:prefLabel xml:lang="en">billboard</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#bollywood -->
+
+    <skos:Concept rdf:about="#bollywood">
+        <skos:prefLabel xml:lang="en">bollywood</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#bookstore -->
+
+    <skos:Concept rdf:about="#bookstore">
+        <skos:prefLabel xml:lang="en">bookstore</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#indoor"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#bowling -->
+
+    <skos:Concept rdf:about="#bowling">
+        <skos:prefLabel xml:lang="en">bowling</skos:prefLabel>
+        <skos:broader rdf:resource="#indoor"/>
+        <skos:broader rdf:resource="#sports"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#cabin -->
+
+    <skos:Concept rdf:about="#cabin">
+        <skos:prefLabel xml:lang="en">cabin</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#lodging"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#calendar -->
+
+    <skos:Concept rdf:about="#calendar">
+        <skos:prefLabel xml:lang="en">calendar</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#cinema -->
+
+    <skos:Concept rdf:about="#cinema">
+        <skos:prefLabel xml:lang="en">cinema</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#indoor"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#cinemark -->
+
+    <skos:Concept rdf:about="#cinemark">
+        <skos:prefLabel xml:lang="en">cinemark</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#city -->
+
+    <skos:Concept rdf:about="#city">
+        <skos:prefLabel xml:lang="en">city</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#clothing_store -->
+
+    <skos:Concept rdf:about="#clothing_store">
+        <skos:prefLabel xml:lang="en">clothing store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#comodethes -->
+
+    <skos:ConceptScheme rdf:about="#comodethes">
+        <skos:hasTopConcept rdf:resource="#indoor"/>
+        <skos:topConceptOf rdf:resource="#indoor"/>
+        <skos:topConceptOf rdf:resource="#outdoor"/>
+        <skos:hasTopConcept rdf:resource="#outdoor"/>
+        <skos:topConceptOf rdf:resource="#sports"/>
+        <skos:hasTopConcept rdf:resource="#sports"/>
+        <skos:narrowMatch rdf:resource="#temporal"/>
+        <skos:topConceptOf rdf:resource="#temporal"/>
+        <skos:hasTopConcept rdf:resource="#temporal"/>
+    </skos:ConceptScheme>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#computer_store -->
+
+    <skos:Concept rdf:about="#computer_store">
+        <skos:prefLabel xml:lang="en">computer store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#convenience_store -->
+
+    <skos:Concept rdf:about="#convenience_store">
+        <skos:prefLabel xml:lang="en"
+            >convenience store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#costco -->
+
+    <skos:Concept rdf:about="#costco">
+        <skos:prefLabel xml:lang="en">costco</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#countryside -->
+
+    <skos:Concept rdf:about="#countryside">
+        <skos:prefLabel xml:lang="en">countryside</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#currency -->
+
+    <skos:Concept rdf:about="#currency">
+        <skos:prefLabel xml:lang="en">currency</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#dance_hall -->
+
+    <skos:Concept rdf:about="#dance_hall">
+        <skos:prefLabel xml:lang="en">dance hall</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#department_store -->
+
+    <skos:Concept rdf:about="#department_store">
+        <skos:prefLabel xml:lang="en"
+            >department store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#disney -->
+
+    <skos:Concept rdf:about="#disney">
+        <skos:prefLabel xml:lang="en">disney</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#outdoor"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#dominos -->
+
+    <skos:Concept rdf:about="#dominos">
+        <skos:prefLabel xml:lang="en">dominos</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#downtown -->
+
+    <skos:Concept rdf:about="#downtown">
+        <skos:prefLabel xml:lang="en">downtown</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#ebay -->
+
+    <skos:Concept rdf:about="#ebay">
+        <skos:prefLabel xml:lang="en">ebay</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#eclipse -->
+
+    <skos:Concept rdf:about="#eclipse">
+        <skos:prefLabel xml:lang="en">eclipse</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#electronics_store -->
+
+    <skos:Concept rdf:about="#electronics_store">
+        <skos:prefLabel xml:lang="en"
+            >electronics store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#espn -->
+
+    <skos:Concept rdf:about="#espn">
+        <skos:prefLabel xml:lang="en">espn</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#facebook -->
+
+    <skos:Concept rdf:about="#facebook">
+        <skos:prefLabel xml:lang="en">facebook</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#fedex -->
+
+    <skos:Concept rdf:about="#fedex">
+        <skos:prefLabel xml:lang="en">fedex</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#fitness -->
+
+    <skos:Concept rdf:about="#fitness">
+        <skos:prefLabel xml:lang="en">fitness</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#florist -->
+
+    <skos:Concept rdf:about="#florist">
+        <skos:prefLabel xml:lang="en">florist</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#football -->
+
+    <skos:Concept rdf:about="#football">
+        <skos:prefLabel xml:lang="en">football</skos:prefLabel>
+        <skos:broader rdf:resource="#outdoor"/>
+        <skos:broader rdf:resource="#sports"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#funny_jokes -->
+
+    <skos:Concept rdf:about="#funny_jokes">
+        <skos:prefLabel xml:lang="en">funny jokes</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#furniture_store -->
+
+    <skos:Concept rdf:about="#furniture_store">
+        <skos:prefLabel xml:lang="en">furniture store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#game_store -->
+
+    <skos:Concept rdf:about="#game_store">
+        <skos:prefLabel xml:lang="en">game store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#indoor"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#garden_store -->
+
+    <skos:Concept rdf:about="#garden_store">
+        <skos:prefLabel xml:lang="en">garden store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#gardening -->
+
+    <skos:Concept rdf:about="#gardening">
+        <skos:prefLabel xml:lang="en">gardening</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#golf -->
+
+    <skos:Concept rdf:about="#golf">
+        <skos:prefLabel xml:lang="en">golf</skos:prefLabel>
+        <skos:broader rdf:resource="#outdoor"/>
+        <skos:broader rdf:resource="#sports"/>
+        <skos:broader rdf:resource="#summer"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#google_maps -->
+
+    <skos:Concept rdf:about="#google_maps">
+        <skos:prefLabel xml:lang="en">google maps</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#grocery_store -->
+
+    <skos:Concept rdf:about="#grocery_store">
+        <skos:prefLabel xml:lang="en">grocery store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#harbor -->
+
+    <skos:Concept rdf:about="#harbor">
+        <skos:prefLabel xml:lang="en">harbor</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#hardware_store -->
+
+    <skos:Concept rdf:about="#hardware_store">
+        <skos:prefLabel xml:lang="en">hardware store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#hertz -->
+
+    <skos:Concept rdf:about="#hertz">
+        <skos:prefLabel xml:lang="en">hertz</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#hilton -->
+
+    <skos:Concept rdf:about="#hilton">
+        <skos:prefLabel xml:lang="en">hilton</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#hobby_shop -->
+
+    <skos:Concept rdf:about="#hobby_shop">
+        <skos:prefLabel xml:lang="en">hobby shop</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#hockey -->
+
+    <skos:Concept rdf:about="#hockey">
+        <skos:prefLabel xml:lang="en">hockey</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#indoor"/>
+        <skos:broader rdf:resource="#sports"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#home_depot -->
+
+    <skos:Concept rdf:about="#home_depot">
+        <skos:prefLabel xml:lang="en">home depot</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#homegoods_store -->
+
+    <skos:Concept rdf:about="#homegoods_store">
+        <skos:prefLabel xml:lang="en">homegoods store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#homes_for_sale -->
+
+    <skos:Concept rdf:about="#homes_for_sale">
+        <skos:prefLabel xml:lang="en">homes for sale</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#hostal -->
+
+    <skos:Concept rdf:about="#hostal">
+        <skos:prefLabel xml:lang="en">hostal</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#lodging"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#hostel -->
+
+    <skos:Concept rdf:about="#hostel">
+        <skos:prefLabel xml:lang="en">hostel</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#lodging"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#hotel -->
+
+    <skos:Concept rdf:about="#hotel">
+        <skos:prefLabel xml:lang="en">hotel</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#lodging"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#ice_cream -->
+
+    <skos:Concept rdf:about="#ice_cream">
+        <skos:prefLabel xml:lang="en">ice cream</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#idioms -->
+
+    <skos:Concept rdf:about="#idioms">
+        <skos:prefLabel xml:lang="en">idioms</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#ikea -->
+
+    <skos:Concept rdf:about="#ikea">
+        <skos:prefLabel xml:lang="en">ikea</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#indoor"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#independent -->
+
+    <skos:Concept rdf:about="#independent">
+        <skos:prefLabel xml:lang="en">independent</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:narrower rdf:resource="#music_store"/>
+        <skos:narrower rdf:resource="#nascar"/>
+        <skos:narrower rdf:resource="#news"/>
+        <skos:narrower rdf:resource="#nightlife"/>
+        <skos:narrower rdf:resource="#nuptial"/>
+        <skos:narrower rdf:resource="#office_depot"/>
+        <skos:narrower rdf:resource="#office_max"/>
+        <skos:narrower rdf:resource="#oktoberfest"/>
+        <skos:narrower rdf:resource="#olympics"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#indoor -->
+
+    <skos:Concept rdf:about="#indoor">
+        <skos:prefLabel xml:lang="en">indoor</skos:prefLabel>
+        <skos:narrower rdf:resource="#basketball"/>
+        <skos:narrower rdf:resource="#bowling"/>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:narrower rdf:resource="#volleyball"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#internet_service_providers -->
+
+    <skos:Concept rdf:about="#internet_service_providers">
+        <skos:prefLabel xml:lang="en"
+            >internet service providers</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#jack_in_the_box -->
+
+    <skos:Concept rdf:about="#jack_in_the_box">
+        <skos:prefLabel xml:lang="en">jack in the box</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#indoor"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#jcpenney -->
+
+    <skos:Concept rdf:about="#jcpenney">
+        <skos:prefLabel xml:lang="en">jc penney</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#indoor"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#jewerly_store -->
+
+    <skos:Concept rdf:about="#jewerly_store">
+        <skos:prefLabel xml:lang="en">jewerly store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#jigsaw_puzzle -->
+
+    <skos:Concept rdf:about="#jigsaw_puzzle">
+        <skos:prefLabel xml:lang="en">jigsaw puzzle</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#kids_games -->
+
+    <skos:Concept rdf:about="#kids_games">
+        <skos:prefLabel xml:lang="en">kids games</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#krispy_kreme -->
+
+    <skos:Concept rdf:about="#krispy_kreme">
+        <skos:prefLabel xml:lang="en">krispy kreme</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#lacrosse -->
+
+    <skos:Concept rdf:about="#lacrosse">
+        <skos:prefLabel xml:lang="en">lacrosse</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#outdoor"/>
+        <skos:broader rdf:resource="#sports"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#lake -->
+
+    <skos:Concept rdf:about="#lake">
+        <skos:prefLabel xml:lang="en">lake</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#legoland -->
+
+    <skos:Concept rdf:about="#legoland">
+        <skos:prefLabel xml:lang="en">legoland</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#outdoor"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#library -->
+
+    <skos:Concept rdf:about="#library">
+        <skos:prefLabel xml:lang="en">library</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#liquor_store -->
+
+    <skos:Concept rdf:about="#liquor_store">
+        <skos:prefLabel xml:lang="en">liquor store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#lobster -->
+
+    <skos:Concept rdf:about="#lobster">
+        <skos:prefLabel xml:lang="en">lobster</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#location -->
+
+    <skos:Concept rdf:about="#location">
+        <skos:narrower rdf:resource="#beach"/>
+        <skos:narrower rdf:resource="#city"/>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:narrower rdf:resource="#countryside"/>
+        <skos:narrower rdf:resource="#lake"/>
+        <skos:narrower rdf:resource="#mountain"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#lodging -->
+
+    <skos:Concept rdf:about="#lodging">
+        <skos:prefLabel xml:lang="en">lodging</skos:prefLabel>
+        <skos:narrower rdf:resource="#bed_and_breakfast"/>
+        <skos:narrower rdf:resource="#cabin"/>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:narrower rdf:resource="#hostal"/>
+        <skos:narrower rdf:resource="#hostel"/>
+        <skos:narrower rdf:resource="#hotel"/>
+        <skos:narrower rdf:resource="#motel"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#macy_s -->
+
+    <skos:Concept rdf:about="#macy_s">
+        <skos:prefLabel xml:lang="en">macy&#39;s</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#indoor"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#mall -->
+
+    <skos:Concept rdf:about="#mall">
+        <skos:prefLabel xml:lang="en">mall</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#indoor"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#marriot -->
+
+    <skos:Concept rdf:about="#marriot">
+        <skos:prefLabel xml:lang="en">marriot</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#indoor"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#mens_clothing_store -->
+
+    <skos:Concept rdf:about="#mens_clothing_store">
+        <skos:prefLabel xml:lang="en"
+            >mens clothing store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#metro -->
+
+    <skos:Concept rdf:about="#metro">
+        <skos:prefLabel xml:lang="en">metro</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#mobile_phone_store -->
+
+    <skos:Concept rdf:about="#mobile_phone_store">
+        <skos:prefLabel xml:lang="en"
+            >mobile phone store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#motel -->
+
+    <skos:Concept rdf:about="#motel">
+        <skos:prefLabel xml:lang="en">motel</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#lodging"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#mountain -->
+
+    <skos:Concept rdf:about="#mountain">
+        <skos:prefLabel xml:lang="en">mountain</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#movie -->
+
+    <skos:Concept rdf:about="#movie">
+        <skos:prefLabel xml:lang="en">movie</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#indoor"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#movie_rental_store -->
+
+    <skos:Concept rdf:about="#movie_rental_store">
+        <skos:prefLabel xml:lang="en"
+            >movie rental store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#museum -->
+
+    <skos:Concept rdf:about="#museum">
+        <skos:prefLabel xml:lang="en">museum</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#indoor"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#music_store -->
+
+    <skos:Concept rdf:about="#music_store">
+        <skos:prefLabel xml:lang="en">music store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#nascar -->
+
+    <skos:Concept rdf:about="#nascar">
+        <skos:prefLabel xml:lang="en">nascar</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#outdoor"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#news -->
+
+    <skos:Concept rdf:about="#news">
+        <skos:prefLabel xml:lang="en">news</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#nightlife -->
+
+    <skos:Concept rdf:about="#nightlife">
+        <skos:prefLabel xml:lang="en">nightlife</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#indoor"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#nuptial -->
+
+    <skos:Concept rdf:about="#nuptial">
+        <skos:prefLabel xml:lang="en">nuptial</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#office_depot -->
+
+    <skos:Concept rdf:about="#office_depot">
+        <skos:prefLabel xml:lang="en">office depot</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#office_equipment_store -->
+
+    <skos:Concept rdf:about="#office_equipment_store">
+        <skos:prefLabel xml:lang="en"
+            >office equipment store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#office_max -->
+
+    <skos:Concept rdf:about="#office_max">
+        <skos:prefLabel xml:lang="en">office max</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#oktoberfest -->
+
+    <skos:Concept rdf:about="#oktoberfest">
+        <skos:prefLabel xml:lang="en">oktoberfest</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#olympics -->
+
+    <skos:Concept rdf:about="#olympics">
+        <skos:prefLabel xml:lang="en">olympics</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#outdoor -->
+
+    <skos:Concept rdf:about="#outdoor">
+        <skos:prefLabel xml:lang="en">outdoor</skos:prefLabel>
+        <skos:narrower rdf:resource="#baseball"/>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:narrower rdf:resource="#football"/>
+        <skos:narrower rdf:resource="#golf"/>
+        <skos:narrower rdf:resource="#rugby"/>
+        <skos:narrower rdf:resource="#surf"/>
+        <skos:narrower rdf:resource="#windsurf"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#outlet_store -->
+
+    <skos:Concept rdf:about="#outlet_store">
+        <skos:prefLabel xml:lang="en">outlet store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#pawn_shop -->
+
+    <skos:Concept rdf:about="#pawn_shop">
+        <skos:prefLabel xml:lang="en">pawn shop</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#pet_store -->
+
+    <skos:Concept rdf:about="#pet_store">
+        <skos:prefLabel xml:lang="en">pet store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#place -->
+
+    <skos:Concept rdf:about="#place">
+        <skos:prefLabel xml:lang="en">place</skos:prefLabel>
+        <skos:narrower rdf:resource="#autoparts_store"/>
+        <skos:narrower rdf:resource="#bike_store"/>
+        <skos:narrower rdf:resource="#cinema"/>
+        <skos:narrower rdf:resource="#clothing_store"/>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:narrower rdf:resource="#computer_store"/>
+        <skos:narrower rdf:resource="#convenience_store"/>
+        <skos:narrower rdf:resource="#department_store"/>
+        <skos:narrower rdf:resource="#electronics_store"/>
+        <skos:narrower rdf:resource="#florist"/>
+        <skos:narrower rdf:resource="#furniture_store"/>
+        <skos:narrower rdf:resource="#garden_store"/>
+        <skos:narrower rdf:resource="#grocery_store"/>
+        <skos:narrower rdf:resource="#hardware_store"/>
+        <skos:narrower rdf:resource="#hobby_shop"/>
+        <skos:narrower rdf:resource="#homegoods_store"/>
+        <skos:narrower rdf:resource="#liquor_store"/>
+        <skos:narrower rdf:resource="#mall"/>
+        <skos:narrower rdf:resource="#mens_clothing_store"/>
+        <skos:narrower rdf:resource="#mobile_phone_store"/>
+        <skos:narrower rdf:resource="#movie_rental_store"/>
+        <skos:narrower rdf:resource="#museum"/>
+        <skos:narrower rdf:resource="#office_equipment_store"/>
+        <skos:narrower rdf:resource="#outlet_store"/>
+        <skos:narrower rdf:resource="#pawn_shop"/>
+        <skos:narrower rdf:resource="#pet_store"/>
+        <skos:narrower rdf:resource="#shoe_store"/>
+        <skos:narrower rdf:resource="#sporting_goods_store"/>
+        <skos:narrower rdf:resource="#theater"/>
+        <skos:narrower rdf:resource="#tire_shop"/>
+        <skos:narrower rdf:resource="#toy_store"/>
+        <skos:narrower rdf:resource="#wholesale_store"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#restaurant -->
+
+    <skos:Concept rdf:about="#restaurant">
+        <skos:prefLabel xml:lang="en">restaurant</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#rugby -->
+
+    <skos:Concept rdf:about="#rugby">
+        <skos:prefLabel xml:lang="en">rugby</skos:prefLabel>
+        <skos:broader rdf:resource="#outdoor"/>
+        <skos:broader rdf:resource="#sports"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#scuba -->
+
+    <skos:Concept rdf:about="#scuba">
+        <skos:prefLabel xml:lang="en">scuba</skos:prefLabel>
+        <skos:broader rdf:resource="#beach"/>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#outdoor"/>
+        <skos:broader rdf:resource="#sports"/>
+        <skos:broader rdf:resource="#summer"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#shoe_store -->
+
+    <skos:Concept rdf:about="#shoe_store">
+        <skos:prefLabel xml:lang="en">shoe store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#ski -->
+
+    <skos:Concept rdf:about="#ski">
+        <skos:prefLabel xml:lang="en">ski</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#mountain"/>
+        <skos:broader rdf:resource="#outdoor"/>
+        <skos:broader rdf:resource="#winter"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#soccer -->
+
+    <skos:Concept rdf:about="#soccer">
+        <skos:prefLabel xml:lang="en">soccer</skos:prefLabel>
+        <skos:broader rdf:resource="#outdoor"/>
+        <skos:broader rdf:resource="#sports"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#sporting_goods_store -->
+
+    <skos:Concept rdf:about="#sporting_goods_store">
+        <skos:prefLabel xml:lang="en"
+            >sporting goods store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#sports -->
+
+    <skos:Concept rdf:about="#sports">
+        <skos:prefLabel xml:lang="en">sports</skos:prefLabel>
+        <skos:narrower rdf:resource="#baseball"/>
+        <skos:narrower rdf:resource="#basketball"/>
+        <skos:narrower rdf:resource="#bowling"/>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:narrower rdf:resource="#golf"/>
+        <skos:narrower rdf:resource="#rugby"/>
+        <skos:narrower rdf:resource="#ski"/>
+        <skos:narrower rdf:resource="#volleyball"/>
+        <skos:narrower rdf:resource="#water_ski"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#spring -->
+
+    <skos:Concept rdf:about="#spring">
+        <skos:prefLabel xml:lang="en">spring</skos:prefLabel>
+        <skos:broader rdf:resource="#temporal"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#summer -->
+
+    <skos:Concept rdf:about="#summer">
+        <skos:prefLabel xml:lang="en">summer</skos:prefLabel>
+        <skos:broader rdf:resource="#temporal"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#surf -->
+
+    <skos:Concept rdf:about="#surf">
+        <skos:prefLabel xml:lang="en">surf</skos:prefLabel>
+        <skos:broader rdf:resource="#beach"/>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#outdoor"/>
+        <skos:broader rdf:resource="#sports"/>
+        <skos:broader rdf:resource="#summer"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#temporal -->
+
+    <skos:Concept rdf:about="#temporal">
+        <skos:narrower rdf:resource="#autumn"/>
+        <skos:hasTopConcept rdf:resource="#comodethes"/>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:narrower rdf:resource="#spring"/>
+        <skos:narrower rdf:resource="#summer"/>
+        <skos:narrower rdf:resource="#vacations"/>
+        <skos:narrower rdf:resource="#winter"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#theater -->
+
+    <skos:Concept rdf:about="#theater">
+        <skos:prefLabel xml:lang="en">theater</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#indoor"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#tire_shop -->
+
+    <skos:Concept rdf:about="#tire_shop">
+        <skos:prefLabel xml:lang="en">tire shop</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#toy_store -->
+
+    <skos:Concept rdf:about="#toy_store">
+        <skos:prefLabel xml:lang="en">toy store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#vacations -->
+
+    <skos:Concept rdf:about="#vacations">
+        <skos:prefLabel xml:lang="en">vacations</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#temporal"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#volleyball -->
+
+    <skos:Concept rdf:about="#volleyball">
+        <skos:prefLabel xml:lang="en">volleyball</skos:prefLabel>
+        <skos:broader rdf:resource="#indoor"/>
+        <skos:broader rdf:resource="#sports"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#water_ski -->
+
+    <skos:Concept rdf:about="#water_ski">
+        <skos:prefLabel xml:lang="en">water ski</skos:prefLabel>
+        <skos:broader rdf:resource="#beach"/>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#lake"/>
+        <skos:broader rdf:resource="#outdoor"/>
+        <skos:broader rdf:resource="#summer"/>
+        <skos:broader rdf:resource="#vacations"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#wholesale_store -->
+
+    <skos:Concept rdf:about="#wholesale_store">
+        <skos:prefLabel xml:lang="en">wholesale store</skos:prefLabel>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#independent"/>
+        <skos:broader rdf:resource="#place"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#windsurf -->
+
+    <skos:Concept rdf:about="#windsurf">
+        <skos:prefLabel xml:lang="en">windsurf</skos:prefLabel>
+        <skos:broader rdf:resource="#beach"/>
+        <skos:inScheme rdf:resource="#comodethes"/>
+        <skos:broader rdf:resource="#lake"/>
+        <skos:broader rdf:resource="#outdoor"/>
+        <skos:broader rdf:resource="#sports"/>
+        <skos:broader rdf:resource="#summer"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://www.comode.org/comode/thesaurus/comodethes.owl#winter -->
+
+    <skos:Concept rdf:about="#winter">
+        <skos:prefLabel xml:lang="en">winter</skos:prefLabel>
+        <skos:broader rdf:resource="#temporal"/>
+    </skos:Concept>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1101) http://owlapi.sourceforge.net -->
+

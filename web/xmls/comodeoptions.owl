@@ -1,0 +1,357 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY comodeoptions "http://www.comode.org/comodeoptions.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.comode.org/comodeoptions.owl#"
+     xml:base="http://www.comode.org/comodeoptions.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:comodeoptions="http://www.comode.org/comodeoptions.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about=""/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#movieOption -->
+
+    <owl:ObjectProperty rdf:about="#movieOption"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#restaurantOption -->
+
+    <owl:ObjectProperty rdf:about="#restaurantOption"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#hasOptions -->
+
+    <owl:DatatypeProperty rdf:about="#hasOptions"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#term -->
+
+    <owl:DatatypeProperty rdf:about="#term"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#KindOfMovie -->
+
+    <owl:Class rdf:about="#KindOfMovie">
+        <rdfs:subClassOf rdf:resource="#Options"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#KindOfRestaurant -->
+
+    <owl:Class rdf:about="#KindOfRestaurant">
+        <rdfs:subClassOf rdf:resource="#Options"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#Options -->
+
+    <owl:Class rdf:about="#Options"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#Terms -->
+
+    <owl:Class rdf:about="#Terms"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#action -->
+
+    <KindOfMovie rdf:about="#action"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#amish -->
+
+    <KindOfRestaurant rdf:about="#amish"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#asian -->
+
+    <KindOfRestaurant rdf:about="#asian"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#baklava -->
+
+    <KindOfRestaurant rdf:about="#baklava"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#british -->
+
+    <KindOfRestaurant rdf:about="#british"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#cajun -->
+
+    <KindOfRestaurant rdf:about="#cajun"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#comedy -->
+
+    <KindOfMovie rdf:about="#comedy"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#deli -->
+
+    <KindOfRestaurant rdf:about="#deli"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#drama -->
+
+    <KindOfMovie rdf:about="#drama"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#dutch -->
+
+    <KindOfRestaurant rdf:about="#dutch"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#french -->
+
+    <KindOfRestaurant rdf:about="#french"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#german -->
+
+    <KindOfRestaurant rdf:about="#german"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#greek -->
+
+    <KindOfRestaurant rdf:about="#greek"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#irish -->
+
+    <KindOfRestaurant rdf:about="#irish"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#italian -->
+
+    <KindOfRestaurant rdf:about="#italian"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#japanese -->
+
+    <KindOfRestaurant rdf:about="#japanese"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#kosher -->
+
+    <KindOfRestaurant rdf:about="#kosher"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#meat -->
+
+    <KindOfRestaurant rdf:about="#meat"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#mexican -->
+
+    <KindOfRestaurant rdf:about="#mexican"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#movie -->
+
+    <Terms rdf:about="#movie">
+        <hasOptions>true</hasOptions>
+        <movieOption rdf:resource="#action"/>
+        <movieOption rdf:resource="#comedy"/>
+        <movieOption rdf:resource="#drama"/>
+        <movieOption rdf:resource="#scifi"/>
+    </Terms>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#pizza -->
+
+    <KindOfRestaurant rdf:about="#pizza"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#polish -->
+
+    <KindOfRestaurant rdf:about="#polish"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#portuguese -->
+
+    <KindOfRestaurant rdf:about="#portuguese"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#restaurant -->
+
+    <Terms rdf:about="#restaurant">
+        <hasOptions>true</hasOptions>
+        <restaurantOption rdf:resource="#amish"/>
+        <restaurantOption rdf:resource="#asian"/>
+        <restaurantOption rdf:resource="#baklava"/>
+        <restaurantOption rdf:resource="#british"/>
+        <restaurantOption rdf:resource="#cajun"/>
+        <restaurantOption rdf:resource="#deli"/>
+        <restaurantOption rdf:resource="#dutch"/>
+        <restaurantOption rdf:resource="#french"/>
+        <restaurantOption rdf:resource="#german"/>
+        <restaurantOption rdf:resource="#greek"/>
+        <restaurantOption rdf:resource="#irish"/>
+        <restaurantOption rdf:resource="#italian"/>
+        <restaurantOption rdf:resource="#japanese"/>
+        <restaurantOption rdf:resource="#kosher"/>
+        <restaurantOption rdf:resource="#meat"/>
+        <restaurantOption rdf:resource="#mexican"/>
+        <restaurantOption rdf:resource="#pizza"/>
+        <restaurantOption rdf:resource="#polish"/>
+        <restaurantOption rdf:resource="#portuguese"/>
+        <restaurantOption rdf:resource="#russian"/>
+        <restaurantOption rdf:resource="#scandinavian"/>
+        <restaurantOption rdf:resource="#scottish"/>
+        <restaurantOption rdf:resource="#snacks"/>
+        <restaurantOption rdf:resource="#spanish"/>
+        <restaurantOption rdf:resource="#turkish"/>
+        <restaurantOption rdf:resource="#vegan"/>
+        <restaurantOption rdf:resource="#vegetarian"/>
+    </Terms>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#russian -->
+
+    <KindOfRestaurant rdf:about="#russian"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#scandinavian -->
+
+    <KindOfRestaurant rdf:about="#scandinavian"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#scifi -->
+
+    <KindOfMovie rdf:about="#scifi"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#scottish -->
+
+    <KindOfRestaurant rdf:about="#scottish"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#snacks -->
+
+    <KindOfRestaurant rdf:about="#snacks"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#spanish -->
+
+    <KindOfRestaurant rdf:about="#spanish"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#turkish -->
+
+    <KindOfRestaurant rdf:about="#turkish"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#vegan -->
+
+    <KindOfRestaurant rdf:about="#vegan"/>
+    
+
+
+    <!-- http://www.comode.org/comodeoptions.owl#vegetarian -->
+
+    <KindOfRestaurant rdf:about="#vegetarian"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1101) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,17 @@
+@prefix comode: http://www.comode.org/comode.owl#
+[SuitableOutdoors: (?s rdf:type comode:User)
+            ->
+           [SuitableOutdoors: (?s rdf:type comode:outdoor) 
+              <- 
+              (?s comode:temperature ?c)
+              greaterThan(?c,15)
+           ]
+ ]
+[seassoncheck: (?s rdf:type comode:User) 
+            ->
+           [seassoncheck: (?s rdf:type comode:summer) 
+              <- 
+              (?s comode:seasson ?c)
+              equal(?c,"summer")
+           ]
+ ]

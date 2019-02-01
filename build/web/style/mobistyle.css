@@ -1,0 +1,76 @@
+/* --- main layout --- */
+	
+	* { margin: 0; padding: 0; }
+	
+	body {
+		font-family:Arial, Helvetica, sans-serif; 
+		font-size:medium; 
+		color:#394147; 
+                background:#fff;
+		/* background:#46535e; */
+		padding:0; 
+		margin:0;
+	}
+	
+	a img,:link img,:visited img,fieldset {border:none;}
+	img {vertical-align:top;}
+	
+	.clear {clear:both}
+	.nowrp {white-space:nowrap;}
+	.wrapper {width:100%; overflow:hidden;}
+
+/* --- END main layout --- */
+
+/* --- header --- */
+
+	#header { font-size:0.625em; line-height:1em; background:url(images2/header-tail.gif) top repeat-x;}
+	
+	#logo {padding:4px 0 151px 0; background:url(images2/header-bg.jpg) no-repeat top center; text-align:center;}
+	
+	.menu {background:url(images2/menu-bg.jpg) no-repeat top center; padding:8px 0 9px 0;}
+	.menu li {display:inline; text-transform:uppercase; padding-left:12px;}
+	.menu li a {color:#9ddeff; text-decoration:none;}
+	.menu .active a {color:#fff;}
+
+/* --- END header --- */
+
+/* --- content --- */
+
+	#content {font-size:0.75em; line-height:1.5em; background:#fff; border-top:4px solid #f0f0f0;}
+	.min-width {padding:20px 15px 25px 12px; min-width:200px;}
+
+	li {list-style:none; clear:both;}
+	a, strong {color:#5db2e9;}
+		
+/* --- END content --- */
+
+/* --- footer --- */
+	
+	#footer {height:67px; color:#fff; font-size:0.6875em; line-height:1.545em; text-align:center; background:url(images2/footer-tail.gif) top repeat-x;}
+	#footer p { padding:16px 0 0 0; background:url(images2/footer-bg.jpg) no-repeat top center; height:51px;}
+	#footer p a {color:#9ddeff;}
+
+/* --- END footer --- */
+
+/* --- Other --- */
+	
+	.f-left {float:left;}
+	.f-right {float:right;}
+	.taright {text-align:right;}
+	.imgindent {float:left;}
+	.imgindent2 {float:left; margin-right:15px;}
+	.margin1 {margin-top:16px;}
+	p {padding-top:18px;}
+	
+	h2 {margin-bottom:11px;}
+	h3 {margin:0 0 9px -4px;}
+
+	input.hidden {display: none; border: none; background-color: #fff;}
+	
+	
+	#ContactForm input , #ContactForm textarea {border:1px solid #e2e2e2; width:275px; padding:1px 0 2px 4px; background:#fff; font-size:1em; line-height:1em; margin-bottom:8px; color:#8c8c8c; font-family:Arial, Helvetica, sans-serif;}
+	#ContactForm textarea {height:130px;}
+	#ContactForm .taright {width:280px;}
+	#ContactForm button {background:none; border:none; color:#5db2e9; text-decoration:underline; font-size:1em;}
+	
+/* --- END Other --- */

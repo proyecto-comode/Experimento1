@@ -1,0 +1,932 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY time "http://www.w3.org/2006/time#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY comode "http://www.comode.org/comode.owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.comode.org/comode.owl#"
+     xml:base="http://www.comode.org/comode.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:comode="http://www.comode.org/comode.owl#">
+    <owl:Ontology rdf:about="">
+        <rdfs:comment
+            >Context Ontology for Mobile Devices (COMoDE)</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&dc;language"/>
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.comode.org/comode.owl#celsius -->
+
+    <owl:ObjectProperty rdf:about="#celsius">
+        <rdfs:domain rdf:resource="#TemperatureMeasurement"/>
+        <owl:propertyDisjointWith rdf:resource="#fahrenheit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#dayOfWeek -->
+
+    <owl:ObjectProperty rdf:about="#dayOfWeek">
+        <rdfs:range rdf:resource="&time;DayOfWeek"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#fahrenheit -->
+
+    <owl:ObjectProperty rdf:about="#fahrenheit">
+        <rdfs:domain rdf:resource="#TemperatureMeasurement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#hasActivitiesPreferences -->
+
+    <owl:ObjectProperty rdf:about="#hasActivitiesPreferences">
+        <rdfs:range rdf:resource="#ActivitiesPreferences"/>
+        <rdfs:domain rdf:resource="#UserPreferences"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#hasLanguagePreferences -->
+
+    <owl:ObjectProperty rdf:about="#hasLanguagePreferences">
+        <rdfs:range rdf:resource="#LanguagePreferences"/>
+        <rdfs:domain rdf:resource="#UserPreferences"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#hasResultsPreferences -->
+
+    <owl:ObjectProperty rdf:about="#hasResultsPreferences">
+        <rdfs:range rdf:resource="#ResultsPreferences"/>
+        <rdfs:domain rdf:resource="#UserPreferences"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#hasTermsPreferences -->
+
+    <owl:ObjectProperty rdf:about="#hasTermsPreferences">
+        <rdfs:range rdf:resource="#TermsPreferences"/>
+        <rdfs:domain rdf:resource="#UserPreferences"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#hasWebSitePreferences -->
+
+    <owl:ObjectProperty rdf:about="#hasWebSitePreferences">
+        <rdfs:domain rdf:resource="#UserPreferences"/>
+        <rdfs:range rdf:resource="#WebSitePreferences"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#isLocatedIn -->
+
+    <owl:ObjectProperty rdf:about="#isLocatedIn">
+        <rdfs:range rdf:resource="#Location"/>
+        <rdfs:domain rdf:resource="#UserPreferences"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#seasson -->
+
+    <owl:ObjectProperty rdf:about="#seasson">
+        <rdfs:range rdf:resource="#Seasson"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#usesDevice -->
+
+    <owl:ObjectProperty rdf:about="#usesDevice">
+        <rdfs:range rdf:resource="#DeviceCharacteristic"/>
+        <rdfs:domain rdf:resource="#UserPreferences"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.comode.org/comode.owl#altitude -->
+
+    <owl:DatatypeProperty rdf:about="#altitude">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#LocationWSG84"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#baseball -->
+
+    <owl:DatatypeProperty rdf:about="#baseball">
+        <rdfs:domain rdf:resource="#TermsPreferences"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#basketball -->
+
+    <owl:DatatypeProperty rdf:about="#basketball">
+        <rdfs:domain rdf:resource="#IndoorSports"/>
+        <rdfs:domain rdf:resource="#OutdoorSports"/>
+        <rdfs:domain rdf:resource="#TermsPreferences"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#birthday -->
+
+    <owl:DatatypeProperty rdf:about="#birthday">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>User&#39;s birthday</rdfs:comment>
+        <rdfs:domain rdf:resource="#UserDescription"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#country -->
+
+    <owl:DatatypeProperty rdf:about="#country">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment
+            >Country of the actual location</rdfs:comment>
+        <rdfs:domain rdf:resource="#LocationDetailed"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#football -->
+
+    <owl:DatatypeProperty rdf:about="#football">
+        <rdfs:domain rdf:resource="#OutdoorSports"/>
+        <rdfs:domain rdf:resource="#TermsPreferences"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#hockey -->
+
+    <owl:DatatypeProperty rdf:about="#hockey">
+        <rdfs:domain rdf:resource="#IndoorSports"/>
+        <rdfs:domain rdf:resource="#TermsPreferences"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#language -->
+
+    <owl:DatatypeProperty rdf:about="#language">
+        <rdfs:comment
+            >Identifies the user&#39;s language preferences using the ISO 639-1 codes</rdfs:comment>
+        <rdfs:domain rdf:resource="#LanguagePreferences"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#latitude -->
+
+    <owl:DatatypeProperty rdf:about="#latitude">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#LocationWSG84"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#locality -->
+
+    <owl:DatatypeProperty rdf:about="#locality">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment
+            >Locality is the name of the actual location</rdfs:comment>
+        <rdfs:domain rdf:resource="#LocationDetailed"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#longitude -->
+
+    <owl:DatatypeProperty rdf:about="#longitude">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#LocationWSG84"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#movie_action -->
+
+    <owl:DatatypeProperty rdf:about="#movie_action">
+        <rdfs:label>movie action</rdfs:label>
+        <rdfs:domain rdf:resource="#TermsPreferences"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#movie_drama -->
+
+    <owl:DatatypeProperty rdf:about="#movie_drama">
+        <dc:description>movie drama</dc:description>
+        <rdfs:domain rdf:resource="#TermsPreferences"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#movie_scifi -->
+
+    <owl:DatatypeProperty rdf:about="#movie_scifi">
+        <rdfs:label>movie scifi</rdfs:label>
+        <rdfs:domain rdf:resource="#TermsPreferences"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#postalCode -->
+
+    <owl:DatatypeProperty rdf:about="#postalCode">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment
+            >Postal Code of the actual location</rdfs:comment>
+        <rdfs:domain rdf:resource="#LocationDetailed"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#region -->
+
+    <owl:DatatypeProperty rdf:about="#region">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment
+            >Region is the state or province of the actual location</rdfs:comment>
+        <rdfs:domain rdf:resource="#LocationDetailed"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#restaurant_italian -->
+
+    <owl:DatatypeProperty rdf:about="#restaurant_italian">
+        <rdfs:label
+            >restaurant italian</rdfs:label>
+        <rdfs:domain rdf:resource="#TermsPreferences"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#restaurant_japanese -->
+
+    <owl:DatatypeProperty rdf:about="#restaurant_japanese">
+        <rdfs:label
+            >restaurant japanese</rdfs:label>
+        <rdfs:domain rdf:resource="#TermsPreferences"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#restaurant_mexican -->
+
+    <owl:DatatypeProperty rdf:about="#restaurant_mexican">
+        <rdfs:label
+            >restaurant mexican</rdfs:label>
+        <rdfs:domain rdf:resource="#TermsPreferences"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#rugby -->
+
+    <owl:DatatypeProperty rdf:about="#rugby">
+        <rdfs:domain rdf:resource="#OutdoorSports"/>
+        <rdfs:domain rdf:resource="#TermsPreferences"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#screenResolution -->
+
+    <owl:DatatypeProperty rdf:about="#screenResolution">
+        <rdfs:domain rdf:resource="#Screen"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#screenSize -->
+
+    <owl:DatatypeProperty rdf:about="#screenSize">
+        <rdfs:domain rdf:resource="#Screen"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#soccer -->
+
+    <owl:DatatypeProperty rdf:about="#soccer">
+        <rdfs:domain rdf:resource="#TermsPreferences"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#street -->
+
+    <owl:DatatypeProperty rdf:about="#street">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment
+            >Street of the actual location</rdfs:comment>
+        <rdfs:domain rdf:resource="#LocationDetailed"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#streetNumber -->
+
+    <owl:DatatypeProperty rdf:about="#streetNumber">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment
+            >Street number of the actual location</rdfs:comment>
+        <rdfs:domain rdf:resource="#LocationDetailed"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#temperature -->
+
+    <owl:DatatypeProperty rdf:about="#temperature">
+        <rdfs:domain rdf:resource="#TemperatureMeasurement"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#userID -->
+
+    <owl:DatatypeProperty rdf:about="#userID">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment
+            >Unique user identification</rdfs:comment>
+        <rdfs:domain rdf:resource="#UserPreferences"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.comode.org/comode.owl#ActivitiesPreferences -->
+
+    <owl:Class rdf:about="#ActivitiesPreferences">
+        <rdfs:subClassOf rdf:resource="#UserPreferences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#Browser -->
+
+    <owl:Class rdf:about="#Browser">
+        <rdfs:subClassOf rdf:resource="#DeviceCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#DeviceCharacteristic -->
+
+    <owl:Class rdf:about="#DeviceCharacteristic">
+        <dc:language>en</dc:language>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#EnvironmentalCondition -->
+
+    <owl:Class rdf:about="#EnvironmentalCondition"/>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#IndoorActivity -->
+
+    <owl:Class rdf:about="#IndoorActivity">
+        <rdfs:subClassOf rdf:resource="#ActivitiesPreferences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#IndoorSports -->
+
+    <owl:Class rdf:about="#IndoorSports">
+        <rdfs:subClassOf rdf:resource="#IndoorActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#LanguagePreferences -->
+
+    <owl:Class rdf:about="#LanguagePreferences">
+        <rdfs:subClassOf rdf:resource="#UserPreferences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#Location -->
+
+    <owl:Class rdf:about="#Location">
+        <rdfs:comment
+            >Geographic location in WSG-84 format and political division</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#LocationDetailed -->
+
+    <owl:Class rdf:about="#LocationDetailed">
+        <rdfs:subClassOf rdf:resource="#Location"/>
+        <rdfs:comment
+            >Detailed geographic location</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#LocationWSG84 -->
+
+    <owl:Class rdf:about="#LocationWSG84">
+        <rdfs:subClassOf rdf:resource="#Location"/>
+        <rdfs:comment
+            >Geographic location using the WGS-84 standard</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#Movement -->
+
+    <owl:Class rdf:about="#Movement">
+        <dc:language>en</dc:language>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#Movies -->
+
+    <owl:Class rdf:about="#Movies">
+        <rdfs:subClassOf rdf:resource="#IndoorActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#Museum -->
+
+    <owl:Class rdf:about="#Museum">
+        <rdfs:subClassOf rdf:resource="#IndoorActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#Network -->
+
+    <owl:Class rdf:about="#Network">
+        <rdfs:subClassOf rdf:resource="#DeviceCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#OutdoorActivity -->
+
+    <owl:Class rdf:about="#OutdoorActivity">
+        <rdfs:subClassOf rdf:resource="#ActivitiesPreferences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#OutdoorSports -->
+
+    <owl:Class rdf:about="#OutdoorSports">
+        <rdfs:subClassOf rdf:resource="#OutdoorActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#Picnic -->
+
+    <owl:Class rdf:about="#Picnic">
+        <rdfs:subClassOf rdf:resource="#OutdoorActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#Processor -->
+
+    <owl:Class rdf:about="#Processor">
+        <rdfs:subClassOf rdf:resource="#DeviceCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#Reading -->
+
+    <owl:Class rdf:about="#Reading">
+        <rdfs:subClassOf rdf:resource="#IndoorActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#Restaurant -->
+
+    <owl:Class rdf:about="#Restaurant">
+        <rdfs:subClassOf rdf:resource="#IndoorActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#ResultsPreferences -->
+
+    <owl:Class rdf:about="#ResultsPreferences">
+        <rdfs:subClassOf rdf:resource="#UserPreferences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#Screen -->
+
+    <owl:Class rdf:about="#Screen">
+        <rdfs:subClassOf rdf:resource="#DeviceCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#Seasson -->
+
+    <owl:Class rdf:about="#Seasson">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#summer"/>
+                    <rdf:Description rdf:about="#winter"/>
+                    <rdf:Description rdf:about="#autumn"/>
+                    <rdf:Description rdf:about="#spring"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Temporal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#Sensor -->
+
+    <owl:Class rdf:about="#Sensor">
+        <rdfs:subClassOf rdf:resource="#DeviceCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#TematicPark -->
+
+    <owl:Class rdf:about="#TematicPark">
+        <rdfs:subClassOf rdf:resource="#OutdoorActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#TemperatureMeasurement -->
+
+    <owl:Class rdf:about="#TemperatureMeasurement">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#Temporal -->
+
+    <owl:Class rdf:about="#Temporal">
+        <rdfs:comment
+            >Falta pasar lo que se necesitar&#225; de la ontolog&#237;a Time del w3c</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#TermsPreferences -->
+
+    <owl:Class rdf:about="#TermsPreferences">
+        <rdfs:subClassOf rdf:resource="#UserPreferences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#User -->
+
+    <owl:Class rdf:about="#User"/>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#UserDescription -->
+
+    <owl:Class rdf:about="#UserDescription">
+        <rdfs:subClassOf rdf:resource="#UserPreferences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#UserPreferences -->
+
+    <owl:Class rdf:about="#UserPreferences">
+        <rdfs:comment rdf:datatype="&xsd;anyURI"
+            >http://www.comode.org/comode.owl#genid15530653700653</rdfs:comment>
+        <rdfs:comment
+            >Defines the User Preferences</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#Walk -->
+
+    <owl:Class rdf:about="#Walk">
+        <rdfs:subClassOf rdf:resource="#OutdoorActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#Weather -->
+
+    <owl:Class rdf:about="#Weather">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#WebSitePreferences -->
+
+    <owl:Class rdf:about="#WebSitePreferences">
+        <rdfs:subClassOf rdf:resource="#UserPreferences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeDescription -->
+
+    <owl:Class rdf:about="&time;DateTimeDescription">
+        <rdfs:subClassOf rdf:resource="#Temporal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DayOfWeek -->
+
+    <owl:Class rdf:about="&time;DayOfWeek">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#sunday"/>
+                    <rdf:Description rdf:about="#monday"/>
+                    <rdf:Description rdf:about="#saturday"/>
+                    <rdf:Description rdf:about="#tuesday"/>
+                    <rdf:Description rdf:about="#friday"/>
+                    <rdf:Description rdf:about="#thursday"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Temporal"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.comode.org/comode.owl#autumn -->
+
+    <Seasson rdf:about="#autumn"/>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#en -->
+
+    <LanguagePreferences rdf:about="#en"/>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#exp1 -->
+
+    <User rdf:about="#exp1">
+        <movie_action>3</movie_action>
+        <soccer>2</soccer>
+        <baseball>1</baseball>
+        <language>en</language>
+        <movie_drama>5</movie_drama>
+        <restaurant_italian>8</restaurant_italian>
+        <country>USA</country>
+        <locality>Los Angeles</locality>
+        <basketball>3</basketball>
+        <football>8</football>
+        <restaurant_japanese>6</restaurant_japanese>
+        <temperature>28</temperature>
+        <userID>exp1</userID>
+        <dayOfWeek rdf:resource="#saturday"/>
+        <seasson rdf:resource="#summer"/>
+    </User>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#exp2 -->
+
+    <User rdf:about="#exp2">
+        <temperature rdf:datatype="&xsd;int">18</temperature>
+        <rugby>5</rugby>
+        <language>en</language>
+        <football>5</football>
+        <movie_drama>2</movie_drama>
+        <movie_scifi>8</movie_scifi>
+        <locality>Valladolid</locality>
+        <basketball>1</basketball>
+        <userID>exp2</userID>
+        <hockey>2</hockey>
+        <movie_action>7</movie_action>
+        <country>Spain</country>
+        <seasson rdf:resource="#autumn"/>
+        <celsius rdf:resource="#exp2"/>
+        <dayOfWeek rdf:resource="#monday"/>
+        <hasTermsPreferences rdf:resource="#movie_drama"/>
+    </User>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#exp3 -->
+
+    <User rdf:about="#exp3">
+        <temperature rdf:datatype="&xsd;int">5</temperature>
+        <restaurant_mexican>4</restaurant_mexican>
+        <userID>exp3</userID>
+        <football>3</football>
+        <country>USA</country>
+        <locality>New York</locality>
+        <movie_drama>6</movie_drama>
+        <language>en</language>
+        <movie_action>5</movie_action>
+        <basketball>5</basketball>
+        <restaurant_italian>2</restaurant_italian>
+        <celsius rdf:resource="#exp3"/>
+        <dayOfWeek rdf:resource="#friday"/>
+        <seasson rdf:resource="#winter"/>
+    </User>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#exp4 -->
+
+    <User rdf:about="#exp4">
+        <seasson rdf:resource="#spring"/>
+        <dayOfWeek rdf:resource="#wednesday"/>
+    </User>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#friday -->
+
+    <time:DayOfWeek rdf:about="#friday"/>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#monday -->
+
+    <time:DayOfWeek rdf:about="#monday"/>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#movie_drama -->
+
+    <rdf:Description rdf:about="#movie_drama"/>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#saturday -->
+
+    <time:DayOfWeek rdf:about="#saturday"/>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#sp -->
+
+    <LanguagePreferences rdf:about="#sp"/>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#spring -->
+
+    <Seasson rdf:about="#spring"/>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#summer -->
+
+    <Seasson rdf:about="#summer"/>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#sunday -->
+
+    <time:DayOfWeek rdf:about="#sunday"/>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#thursday -->
+
+    <time:DayOfWeek rdf:about="#thursday"/>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#tuesday -->
+
+    <time:DayOfWeek rdf:about="#tuesday"/>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#wednesday -->
+
+    <time:DayOfWeek rdf:about="#wednesday"/>
+    
+
+
+    <!-- http://www.comode.org/comode.owl#winter -->
+
+    <Seasson rdf:about="#winter"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1101) http://owlapi.sourceforge.net -->
+
